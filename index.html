@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Asesor de Estrategias de Marketing Digital</h1>
+    
+    <div id="question1" class="question-container active">
+      <div class="question">¿Cuál es el presupuesto mensual que puedes invertir en marketing?</div>
+      <select id="budget">
+        <option value="">Selecciona una opción</option>
+        <option value="bajo">Menos de $100.000</option>
+        <option value="medio">Entre $100.000 y $500.000</option>
+        <option value="alto">Más de $500.000</option>
+      </select>
+      <button onclick="nextQuestion(1)">Siguiente</button>
+    </div>
+
+    <div id="question2" class="question-container">
+      <div class="question">¿Cuál es tu objetivo principal?</div>
+      <select id="objective">
+        <option value="">Selecciona una opción</option>
+        <option value="ventas">Aumentar ventas</option>
+        <option value="marca">Construir marca</option>
+        <option value="trafico">Generar tráfico web</option>
+        <option value="leads">Conseguir leads</option>
+      </select>
+      <button onclick="nextQuestion(2)">Siguiente</button>
+    </div>
+
+    <div id="question3" class="question-container">
+      <div class="question">¿Cuál es tu público objetivo principal?</div>
+      <select id="target">
+        <option value="">Selecciona una opción</option>
+        <option value="b2b">Empresas (B2B)</option>
+        <option value="b2c">Consumidor final (B2C)</option>
+        <option value="ambos">Ambos</option>
+      </select>
+      <button onclick="getStrategy()">Ver Estrategia</button>
+    </div>
+
+    <div id="result" class="result-container">
+      <div class="strategy-card">
+        <div class="strategy-title">Tu Estrategia Recomendada</div>
+        <div id="strategy-content"></div>
+      </div>
+      <button onclick="resetQuiz()" style="margin-top: 20px">Comenzar de nuevo</button>
+    </div>
+  </div>
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>
